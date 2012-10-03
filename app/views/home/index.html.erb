@@ -1,0 +1,23 @@
+<h1>Send Mail</h1>
+
+<%= form_tag mail_path do |f| %>
+
+  <%= label 'to', 'To' %>
+  <%= text_field_tag 'to' %>
+  <br />
+
+  <%= label 'category', 'category' %>
+  <%= text_field_tag 'category', 'default category' %>
+  <br />
+
+  <%= label 'subject', 'subject' %>
+  <%= text_field_tag 'subject', 'default subject' %>
+  <br />
+
+  <%= label 'body', 'body' %>
+  <%= text_area_tag 'body', 'No Content?!', rows: 5, cols: 74 %>
+  <br />
+
+  <%= submit_tag %>
+
+<% end %>
