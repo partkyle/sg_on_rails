@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   end
 
   def mail
-
+    ContactMailer.contact_email(params).deliver
     flash[:notice] = 'Mail Sent!'
     redirect_to root_path
   end
